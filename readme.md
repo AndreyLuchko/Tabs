@@ -1,11 +1,59 @@
-## Задание
+# JavaScript Tabs
 
-Реализовать переключение вкладок (табы) на чистом Javascript.
+Implemented tab switching in Javascript.
 
-#### Технические требования:
-- В папке `tabs` лежит разметка для вкладок. Нужно, чтобы по нажатию на вкладку отображался конкретный текст для нужной вкладки. При этом остальной текст должен быть скрыт. В комментариях указано, какой текст должен отображаться для какой вкладки. 
-- Разметку можно менять, добавлять нужные классы, id, атрибуты, теги.
-- Нужно предусмотреть, что текст на вкладках может меняться, и что вкладки могут добавляться и удаляться. При этом нужно, чтобы функция, написанная в джаваскрипте, из-за таких правок не переставала работать.
+## Demo
 
-#### Литература:
-- [HTMLElement.dataset](https://developer.mozilla.org/ru/docs/Web/API/HTMLElement/dataset)
+![tabs-demo](https://github.com/AndreyLuchko/Tabs/blob/main/file/record4.gif)
+
+## Usage:
+- The markup is implemented as follows:
+```html
+<div class="centered-content">
+        <ul class="tabs">
+            <li class="tabs-title active">Akali</li>
+            <li class="tabs-title">Anivia</li>
+            <li class="tabs-title">Draven</li>
+            <li class="tabs-title">Garen</li>
+            <li class="tabs-title">Katarina</li>
+        </ul>
+        <ul class="tabs-content">
+            <!-- Akali -->
+            <li>Your text</li>
+            <!-- Anivia -->
+            <li>Your text</li>
+            <!--Draven -->
+            <li>Your text</li>
+            <!-- Garen -->
+            <li>Your text</li>
+            <!-- Katarina -->
+            <li>Your text</li>
+        
+        </ul>
+    </div>
+``` 
+- function has three arguments
+```javascript
+function tabs (parentSelector, titleSelector, contentSelector) {
+
+    const tabHeader = document.querySelector(parentSelector),
+          tabs = document.querySelectorAll(titleSelector), 
+          content = document.querySelectorAll(contentSelector); 
+
+    // rest code...
+}
+```
+- text on tabs can change
+- tabs can be added and removed
+
+
+
+## Built With
+
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+## Example
+
+[TABS](https://andreyluchko.github.io/Tabs/)

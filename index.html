@@ -7,14 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tabs</title>
     <style>
+        body {
+            font-family: Geneva, sans-serif;
+        }
+
         ul {
             list-style: none;
             padding-left: 0;
-            max-width: 600px;
         }
 
         .centered-content {
-            /* height: 50vh; */
+            margin: 0 auto;
+            max-width: 600px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -23,18 +27,44 @@
 
         .tabs {
             display: flex;
+            width: 100%;
+            margin-bottom: 0;
+            gap: 5px;
         }
 
         .tabs-title {
+            flex: 1 1 20%;
             padding: 20px;
-            background-color: #23201D;
-            color: #41936d;
+            background-color: #d8d8d8;
+            color: #3f96dd;
+            text-align: center;
+            font-size: 0.9rem;
             cursor: pointer;
+            border-radius: 10px 10px 0 0;
+            border: 1px solid #d8d8d8;
+            border-bottom: none;
+            z-index: 100;
+            transition: all .25s;
         }
 
-        .tabs-title.active {
-            background-color: #41936d;
-            color: #23201D;
+        .tabs-content {
+            margin-top: -1px;
+        }
+
+        .tabs-content li {
+            padding: 10px 10px;
+            height: 10vh;
+            border-radius: 0 0 10px 10px;
+            border: 1px solid #d8d8d8;
+            font-size: 0.9rem;
+            
+        }
+
+        .tabs-title.active,
+        .tabs-content li.active {
+            background-color: #ffffff;
+            /* color: #23201D; */
+            font-style: italic;
         }
     </style>
 </head>
